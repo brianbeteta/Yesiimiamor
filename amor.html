@@ -127,7 +127,7 @@
     </div>
 
     <audio id="musica-fondo" loop>
-        <source src="musica.mp3" type="audio/mpeg">
+        <source src="música.mp3" type="audio/mpeg">
     </audio>
 
     <h1>¡Feliz Noche, Mi Amor! 🌙</h1>
@@ -150,13 +150,13 @@
             1: "Me encanta cómo iluminas todo a tu alrededor con solo sonreír. Es, sin duda, mi parte favorita de cada día, Yesii. 😍",
             2: "Cada día que pasa me doy cuenta de la suerte tan inmensa que tengo de tenerte en mi vida. Eres increíble, hermosa y completamente única. 🌹",
             3: "Tus abrazos son mi lugar seguro en el mundo, el sitio perfecto donde siempre quiero quedarme y reiniciarme. 🧸",
-            4: "Que descanses delicioso, mi vida. Sueña con cosas hermosas y recuerda siempre que te adoro con todo mi corazón. ¡Hasta mañana! ✨"
+            4: "Que descanses delicioso, mi vida. Sueña con cosas hermosas y recuerda siempre que te amo con todo mi corazón. ¡Hasta mañana! ✨"
         };
 
         function comenzar() {
             document.getElementById('pantalla-inicio').classList.add('oculto');
             var audio = document.getElementById('musica-fondo');
-            audio.volume = 0.4; // Ajuste idóneo para la música de fondo
+            audio.volume = 0.4; 
             audio.play().catch(function(error) {
                 console.log("Error al reproducir el archivo local música.mp3: ", error);
             });

@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para mi princesa</title>
+    <title>Para mi princesa Yesii 💖</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #0f051d, #290a33);
@@ -30,7 +33,6 @@
             align-items: center;
             z-index: 10;
             padding: 20px;
-            box-sizing: border-box;
         }
 
         .btn-inicio {
@@ -118,19 +120,16 @@
 </head>
 <body>
 
-    <!-- Pantalla Inicial indispensable para el audio -->
     <div id="pantalla-inicio">
-        <h2 style="color: #ff758f; margin-bottom: 10px; font-weight: normal; text-align: center;">Tengo un detalle para ti antes de dormir...</h2>
+        <h2 style="color: #ff758f; margin-bottom: 10px; font-weight: normal; text-align: center;">Tengo un detalle para ti antes de dormir, Yesii...</h2>
         <p style="color: #a0a0c0; margin-bottom: 30px;">(Sube el volumen para escuchar la sorpresa)</p>
         <button class="btn-inicio" onclick="comenzar()">Abrir con amor ❤️</button>
     </div>
 
-    <!-- Música de fondo: Shakira - Antología (Instrumental Romántica) -->
     <audio id="musica-fondo" loop>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mpeg">
+        <source src="musica.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- Contenido Principal -->
     <h1>¡Feliz Noche, Mi Amor! 🌙</h1>
     <p class="subtitulo">Haz clic en cada botón para descubrir lo que tengo que decirte hoy:</p>
 
@@ -141,26 +140,25 @@
         <button class="corazon-click" onclick="mostrarMensaje(4)">🌹 Mi deseo hoy</button>
     </div>
 
-    <!-- El mensaje dinámico cambiará aquí -->
     <div id="caja-mensaje">
         <span style="color: #a0a0c0; font-style: italic;">Presiona los botones de arriba...</span>
     </div>
 
     <script>
-        // Mensajes interactivos
+        // Mensajes interactivos personalizados
         const mensajes = {
-            1: "Me encanta cómo iluminas todo a tu alrededor con solo sonreír. Es, sin duda, mi parte favorita de cada día. 😍",
+            1: "Me encanta cómo iluminas todo a tu alrededor con solo sonreír. Es, sin duda, mi parte favorita de cada día, Yesii. 😍",
             2: "Cada día que pasa me doy cuenta de la suerte tan inmensa que tengo de tenerte en mi vida. Eres increíble, hermosa y completamente única. 🌹",
-            3: "Tus abrazos son mi lugar seguro en el mundo, el sitio perfecto donde siempre quiero quedarme. 🧸",
+            3: "Tus abrazos son mi lugar seguro en el mundo, el sitio perfecto donde siempre quiero quedarme y reiniciarme. 🧸",
             4: "Que descanses delicioso, mi vida. Sueña con cosas hermosas y recuerda siempre que te amo con todo mi corazón. ¡Hasta mañana! ✨"
         };
 
         function comenzar() {
             document.getElementById('pantalla-inicio').classList.add('oculto');
             var audio = document.getElementById('musica-fondo');
-            audio.volume = 0.4; // Ajuste de volumen
+            audio.volume = 0.4; // Ajuste idóneo para la música de fondo
             audio.play().catch(function(error) {
-                console.log("Error al reproducir audio: ", error);
+                console.log("Error al reproducir el archivo local musica.mp3: ", error);
             });
         }
 

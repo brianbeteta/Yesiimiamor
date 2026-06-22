@@ -127,9 +127,7 @@
     </div>
 
     <audio id="musica-fondo" loop preload="auto">
-        <source src="./m&uacute;sica.mp3" type="audio/mpeg">
-        <source src="./m%C3%BAsica.mp3" type="audio/mpeg">
-        <source src="música.mp3" type="audio/mpeg">
+        <source src="amor.mp3" type="audio/mpeg">
     </audio>
 
     <h1>¡Feliz Noche, Mi Amor! 🌙</h1>
@@ -147,7 +145,6 @@
     </div>
 
     <script>
-        // Mensajes interactivos personalizados
         const mensajes = {
             1: "Me encanta cómo iluminas todo a tu alrededor con solo sonreír. Es, sin duda, mi parte favorita de cada día, Yesii. 😍",
             2: "Cada día que pasa me doy cuenta de la suerte tan inmensa que tengo de tenerte en mi vida. Eres increíble, hermosa y completamente única. 🌹",
@@ -160,7 +157,7 @@
             var audio = document.getElementById('musica-fondo');
             audio.volume = 0.4; 
             audio.play().catch(function(error) {
-                console.log("Error al reproducir el archivo local música.mp3: ", error);
+                console.log("Error al reproducir el archivo amor.mp3: ", error);
             });
         }
 

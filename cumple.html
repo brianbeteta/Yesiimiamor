@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -19,7 +19,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            overflow: hidden; /* Mantiene el fondo fijo */
         }
 
         /* Pantalla de bienvenida */
@@ -54,10 +54,11 @@
             box-shadow: 0 6px 25px rgba(236, 72, 153, 0.6);
         }
 
-        /* Caja de la felicitación extensa */
+        /* CORRECCIÓN DE SCROLL: Caja de la felicitación con scroll táctil habilitado */
         .tarjeta-felicitacion {
             width: 92%;
-            max-width: 460px;
+            max-width: 480px;
+            max-height: 85vh; /* Evita que se salga de la pantalla */
             background: rgba(255, 255, 255, 0.06);
             border-radius: 24px;
             padding: 30px;
@@ -67,6 +68,10 @@
             transform: translateY(20px);
             opacity: 0;
             transition: all 0.6s ease;
+            
+            /* Estas tres líneas mágicas activan el scroll en el celular */
+            overflow-y: auto; 
+            -webkit-overflow-scrolling: touch; 
         }
 
         .tarjeta-felicitacion.visible {
@@ -76,7 +81,7 @@
 
         h1 {
             color: #f472b6;
-            font-size: 2em;
+            font-size: 1.8em;
             margin-bottom: 5px;
             text-shadow: 0 0 10px rgba(244, 114, 182, 0.3);
         }
@@ -93,8 +98,8 @@
             border: 1px solid rgba(168, 85, 247, 0.4);
         }
 
-        p.carta-texto {
-            font-size: 1.05em;
+        .carta-texto {
+            font-size: 0.98em;
             line-height: 1.6;
             color: #e2e8f0;
             text-align: justify;
@@ -118,15 +123,17 @@
         <h1>¡Feliz Cumpleaños! 🎉</h1>
         <div class="edad">✨ Sarita - 17 Años ✨</div>
         
-        <p class="carta-texto">
-            Hoy es un día sumamente especial y no quería dejar pasar la oportunidad de enviarte un saludo de todo corazón. ¡Muchísimas felicidades por tus 17 años!
+        <div class="carta-texto">
+            Hoy es un día sumamente especial y alegre, Sarita, y bajo ninguna circunstancia quería dejar pasar la oportunidad de enviarte un saludo cargado de mis mejores deseos. ¡Muchísimas felicidades por llegar a tus 17 años!
 
-            Es una etapa fantástica llena de aprendizajes, sueños por descubrir y grandes decisiones de cara al futuro. Deseo que pases un día increíble, sumamente consentida, muy feliz y rodeada de todo el amor de tu mamá y de tu familia que tanto te quieren.
+            Cumplir diecisiete es un paso maravilloso en la vida de cualquier joven. Estás en una edad dorada, Sarita, un punto mágico donde dejas atrás la niñez para empezar a construir, con madurez y entusiasmo, el camino hacia la mujer independiente y exitosa que estás destinada a ser. Se viene una etapa fantástica llena de nuevos horizontes, retos académicos como la preparación universitaria, y decisiones importantes que poco a poco irán dándole forma a tu futuro profesional. Tienes una mente brillante y todo el potencial para comerte el mundo si así te lo propones.
 
-            Que este nuevo año que hoy comienzas te traiga muchísimas alegrías, momentos divertidos e inolvidables, y sobre todo, la constancia y el éxito para alcanzar cada una de las metas que te propongas en tus estudios y en tu vida.
+            Deseo de todo corazón que pases un cumpleaños increíble, Sarita. Que hoy te sientas sumamente consentida, llena de sorpresas bonitas y rodeada del amor incondicional de tu mamá y de toda tu familia, quienes se sienten inmensamente orgullosos de la gran chica que eres. Disfruta al máximo cada segundo de este día, ríe a caricajadas, comparte con tus amigos y atesora cada recuerdo, porque te mereces solo cosas hermosas.
 
-            ¡Te mando un fuerte abrazo, muchas bendiciones y los mejores deseos en tu día! 🥳🎈
-        </p>
+            Espero que este nuevo año de vida que hoy empiezas a escribir venga desbordado de mucha salud, bendiciones en abundancia, risas compartidas y momentos inolvidables. Que la vida te regale la sabiduría, la dedicación y la constancia necesarias para alcanzar con éxito cada una de las metas que te fijes en tus estudios y en tus proyectos personales. Nunca dejes de sonreír, Sarita, ni permitas que nadie apague esa luz y esa energía tan linda que transmites. Confía siempre en tus capacidades, porque tienes la fuerza para llegar tan lejos como tus sueños te lo dicten.
+
+            ¡Te mando un fuerte abrazo a la distancia, las mejores vibras del mundo y mis más sinceras felicitaciones hoy en tu cumpleaños! ¡Que la pases increíble, Sarita! 🥳🎈🍰🌟
+        </div>
     </div>
 
     <script>

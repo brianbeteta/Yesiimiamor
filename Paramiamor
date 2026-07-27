@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Para Usted ✨</title>
+    <style>
+        /* Restablecer estilos base para asegurar scroll */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden; /* Evitar scroll horizontal */
+            overflow-y: auto;   /* Forzar scroll vertical */
+            background: linear-gradient(to bottom right, #ffdde1, #ee9ca7);
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
+        }
+
+        /* Contenedor principal que permite el scroll */
+        .main-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alinear al inicio, no al centro */
+            min-height: 100%;
+            padding: 40px 20px; /* Padding superior e inferior generoso */
+            box-sizing: border-box;
+        }
+
+        /* La tarjeta del mensaje */
+        .container {
+            background-color: rgba(255, 255, 255, 0.98);
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            max-width: 550px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-sizing: border-box;
+            position: relative; /* Para asegurar posicionamiento correcto */
+        }
+
+        h1 {
+            color: #d81b60;
+            font-size: 26px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .main-text {
+            color: #4a4a4a;
+            line-height: 1.8;
+            text-align: justify;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .btn-panel {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        button {
+            background-color: #d81b60;
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 5px 15px rgba(216, 27, 96, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 100%;
+        }
+
+        button:active {
+            transform: translateY(2px);
+            box-shadow: 0 3px 10px rgba(216, 27, 96, 0.2);
+        }
+
+        #message-display {
+            background-color: #fce4ec;
+            color: #880e4f;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 17px;
+            font-weight: 500;
+            min-height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            border: 2px dashed #f8bbd0;
+            box-sizing: border-box;
+        }
+
+        #message-display.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Ajustes para pantallas muy pequeñas */
+        @media (max-width: 400px) {
+            h1 { font-size: 22px; }
+            .main-text { font-size: 15px; }
+            button { font-size: 14px; padding: 14px; }
+            .container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Envoltorio principal para permitir el scroll -->
+<div class="main-wrapper">
+    <div class="container">
+        <h1>Buenos días, mi amor ❤️</h1>
+        
+        <div class="main-text">
+            <p>
+                Hoy quería empezar la jornada tomándome unos minutos para escribirle esto. Quería agradecerle de todo corazón por este fin de semana tan especial que pasamos juntos. Cada instante a su lado siempre se siente distinto, lleno de una paz y de una felicidad increíble; de verdad me encanta pasar tiempo con usted, compartir risas, pláticas y simplemente disfrutar de su compañía. Tenerla cerca hace que todo lo demás pase a segundo plano.
+            </p>
+            <p>
+                Hoy que nos toca regresar a la rutina y a nuestras actividades laborales, sé que la voy a extrañar muchísimo durante todo el día. Aunque el trabajo nos mantenga ocupados, le aseguro que se queda en mis pensamientos en cada momento. Deseo con muchas ganas que su día sea muy productivo, que todo le salga de la mejor manera y, sobre todo, espero que muy pronto podamos volver a coincidir y reunirnos para seguir sumando momentos así de bonitos.
+            </p>
+            <p style="text-align: center; font-weight: bold; color: #d81b60; font-size: 18px; margin-bottom: 0;">
+                Le mando un abrazo enorme y un beso muy especial. ¡Que tenga un día maravilloso!
+            </p>
+        </div>
+
+        <p style="color: #880e4f; font-weight: 500; margin-bottom: 15px;">Toque cada botón para descubrir una sorpresa:</p>
+
+        <div class="btn-panel">
+            <button onclick="revelarMensaje(1)">🎁 Sorpresa 1: Un Pensamiento</button>
+            <button onclick="revelarMensaje(2)">💝 Sorpresa 2: Un Cumplido</button>
+            <button onclick="revelarMensaje(3)">✨ Sorpresa 3: Una Promesa</button>
+        </div>
+
+        <div id="message-display">
+            Toque un botón arriba...
+        </div>
+    </div>
+</div>
+
+<script>
+    function revelarMensaje(numero) {
+        const display = document.getElementById('message-display');
+        
+        // Ocultar primero para la animación
+        display.classList.remove('visible');
+        
+        // Esperar un momento antes de mostrar el nuevo mensaje
+        setTimeout(() => {
+            let mensajeElegido = "";
+            
+            switch(numero) {
+                case 1:
+                    mensajeElegido = "💭 <b>Un pensamiento:</b> En medio de todo el trabajo, mi mente siempre encuentra un momento para escapar y estar con usted.";
+                    break;
+                case 2:
+                    mensajeElegido = "🌹 <b>Un cumplido:</b> Su sonrisa es, sin duda, lo más bonito de mi día. ¡Espero que sonría mucho hoy!";
+                    break;
+                case 3:
+                    mensajeElegido = "🤝 <b>Una promesa:</b> El próximo fin de semana será aún más increíble. ¡Ya estoy contando los días!";
+                    break;
+                default:
+                    mensajeElegido = "Toque un botón arriba...";
+            }
+            
+            display.innerHTML = mensajeElegido;
+            display.classList.add('visible');
+        }, 150); 
+    }
+</script>
+
+</body>
+</html>

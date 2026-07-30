@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños Camila!</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card-container {
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            max-width: 500px;
+            width: 100%;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid #70a1ff;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        /* Elementos decorativos flotantes */
+        .decoration {
+            position: absolute;
+            font-size: 1.5rem;
+            opacity: 0.25;
+            animation: float 4s ease-in-out infinite alternate;
+        }
+        .deco-1 { top: 15px; left: 20px; animation-delay: 0s; }
+        .deco-2 { top: 20px; right: 20px; animation-delay: 1s; }
+        .deco-3 { bottom: 20px; left: 25px; animation-delay: 2s; }
+        .deco-4 { bottom: 15px; right: 25px; animation-delay: 1.5s; }
+
+        .badge {
+            background-color: #70a1ff;
+            color: #ffffff;
+            font-size: 0.9rem;
+            font-weight: bold;
+            padding: 6px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            color: #2f3542;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #ff6b81;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #70a1ff, transparent);
+            margin: 20px 0;
+        }
+
+        .message {
+            color: #57606f;
+            line-height: 1.7;
+            font-size: 1.05rem;
+            text-align: justify;
+            margin-bottom: 25px;
+        }
+
+        .message p {
+            margin-bottom: 15px;
+        }
+
+        .icons-bar {
+            font-size: 1.8rem;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .footer-note {
+            font-style: italic;
+            color: #2ed573;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            from { transform: translateY(0px); }
+            to { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <!-- Decoraciones de fondo -->
+        <span class="decoration deco-1">🎵</span>
+        <span class="decoration deco-2">✨</span>
+        <span class="decoration deco-3">🦷</span>
+        <span class="decoration deco-4">🎹</span>
+
+        <span class="badge">Sweet 16</span>
+        <h1>¡Feliz Cumpleaños, Camila! 🎉</h1>
+        <div class="subtitle">Celebrando tus 16 años</div>
+
+        <div class="divider"></div>
+
+        <div class="message">
+            <p>Hoy celebramos tus 16 años, una etapa hermosa llena de metas, sueños y un futuro brillante por delante.</p>
+            
+            <p>Tu amabilidad ilumina a quienes te rodean, y tu gran talento en la música demuestra la pasión y dedicación que pones en todo lo que haces. Es admirable ver cómo te esfuerzas día a día en tus estudios para alcanzar ese gran sueño de convertirte en una excelente odontóloga.</p>
+            
+            <p>Nunca dejes de tocar tu propia melodía, de perseguir tus metas con esa disciplina que te caracteriza y de sonreírle al mundo. ¡Tienes todo el potencial para lograr cada proyecto que te propongas!</p>
+        </div>
+
+        <div class="icons-bar">
+            <span>🎶</span>
+            <span>⭐</span>
+            <span>📚</span>
+            <span>🩺</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="footer-note">¡Que tengas un día tan increíble como tu futuro!</p>
+    </div>
+
+</body>
+</html>

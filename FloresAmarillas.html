@@ -91,21 +91,22 @@
             color: #d68910;
             text-align: right;
         }
-        /* Playlist styles */
-        .playlist-item {
+        /* Details / Messages styles */
+        .detail-item {
             background: #fffde7;
-            padding: 12px 15px;
+            padding: 15px;
             border-radius: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             border-left: 4px solid #fbc02d;
         }
-        .playlist-item h3 {
+        .detail-item h3 {
             font-size: 15px;
             color: #b7950b;
+            margin-bottom: 5px;
         }
-        .playlist-item p {
-            font-size: 13px;
-            color: #666;
+        .detail-item p {
+            font-size: 14px;
+            color: #555;
         }
         /* Coupons styles */
         .coupon {
@@ -127,8 +128,8 @@
             margin-bottom: 5px;
         }
         .coupon p {
-            font-size: 14px;
-            color: #555;
+            font-size: 13px;
+            color: #666;
         }
         .footer {
             text-align: center;
@@ -143,12 +144,12 @@
     <div class="container">
         <header>
             <h1>🌻 Para Yessi mi amor 🌻</h1>
-            <p>Un detalle especial a la distancia</p>
+            <p>Un detalle especial con todo mi cariño</p>
         </header>
 
         <div class="nav-tabs">
             <button class="tab-btn active" onclick="switchTab(event, 'carta-section')">💌 Carta</button>
-            <button class="tab-btn" onclick="switchTab(event, 'playlist-section')">🎶 Playlist</button>
+            <button class="tab-btn" onclick="switchTab(event, 'detalles-section')">✨ Detalles</button>
             <button class="tab-btn" onclick="switchTab(event, 'vales-section')">🎟️ Vales</button>
         </div>
 
@@ -156,55 +157,54 @@
         <div id="carta-section" class="content-section active">
             <div class="card-letter">
                 <p><strong>Yessi mi amor,</strong></p>
-                <p>Hoy es un día muy especial, el día de las flores amarillas, y aunque me hubiera encantado estar a tu lado entregándote un detalle en persona, el trabajo como visitador médico me ha obligado a salir hacia los departamentos desde muy temprano.</p>
-                <p>Sé que estos días nos toca estar un poquito distanciados por cuestiones laborales y que no podré verte en lo que resta de la semana, pero quiero que sepas que te tengo presente en cada momento de mi recorrido. Pienso mucho en ti y en las ganas que tengo de verte de nuevo.</p>
-                <p>Quiero recordarte lo muchísimo que **la quiero** y lo mucho que **la adoro con todo mi corazón**. Eres una mujer maravillosa y este pequeño espacio digital lo hice pensando en sacarte una sonrisa hoy.</p>
-                <p class="signature">Con todo mi cariño,<br>Tu novio</p>
+                <p>Sé perfectamente que está pasando por momentos muy difíciles y dolorosos tras la partida de su hermano, y quiero que sepa que mi corazón está con usted a cada instante. Admiro profundamente la gran fortaleza y la valentía con la que afronta cada día.</p>
+                <p>Hoy se celebra el día de las flores amarillas y, aunque por cuestiones de trabajo como visitador médico me ha tocado salir hacia los departamentos y la distancia nos separa físicamente durante estos días, quiero que tenga la certeza de que mi pensamiento y mi apoyo no se apartan de usted ni un solo segundo.</p>
+                <p>Quiero recordarle cuánto **la quiero**, cuánto **la adoro mucho** y lo sumamente importante que es en mi vida. Aunque hoy no pueda entregarle un detalle en persona, quise crear este pequeño espacio para recordarle que no está sola, que cuenta conmigo y que ya estoy contando las horas para regresar, verla y abrazarla muy fuerte.</p>
+                <p class="signature">Con todo mi cariño y apoyo incondicional,<br>Brian Beteta</p>
             </div>
         </div>
 
-        <!-- SECCIÓN PLAYLIST -->
-        <div id="playlist-section" class="content-section">
-            <h2 style="font-size: 18px; color: #b7950b; margin-bottom: 15px; text-align: center;">Nuestra Playlist a la Distancia 🎧</h2>
-            <p style="font-size: 14px; color: #666; margin-bottom: 15px; text-align: center;">Canciones seleccionadas para acompañarte mientras estoy fuera:</p>
+        <!-- SECCIÓN DETALLES / MENSAJES -->
+        <div id="detalles-section" class="content-section">
+            <h2 style="font-size: 18px; color: #b7950b; margin-bottom: 15px; text-align: center;">Razones para sonreír hoy ✨</h2>
             
-            <div class="playlist-item">
-                <h3>1. Música Urbana & Reggaeton Favorito</h3>
-                <p>Para recordar nuestros momentos alegres y llenarnos de energía positiva.</p>
+            <div class="detail-item">
+                <h3>🌻 Un rayito de luz a la distancia</h3>
+                <p>Aunque el trabajo nos obligue a estar separados estos días, cada flor amarilla de hoy lleva un pedacito de mi cariño para recordarle que la quiero muchísimo.</p>
             </div>
-            <div class="playlist-item">
-                <h3>2. Temas Románticos y Dedicatorias</h3>
-                <p>Porque aunque la distancia nos separe temporalmente, mis pensamientos están contigo.</p>
+            <div class="detail-item">
+                <h3>🫂 Mi apoyo incondicional</h3>
+                <p>Recuerde que mi hombro y mi corazón están siempre disponibles para usted, para escucharla, acompañarla y brindarle paz cuando más lo necesite.</p>
             </div>
-            <div class="playlist-item">
-                <h3>3. Una melodía para sonreír</h3>
-                <p>Para recordarte que pronto estaremos juntos de nuevo compartiendo risas.</p>
+            <div class="detail-item">
+                <h3>❤️ El reencuentro</h3>
+                <p>Ya falta menos para terminar esta gira por los departamentos y poder regresar a darle el abrazo más grande y sincero del mundo.</p>
             </div>
         </div>
 
         <!-- SECCIÓN VALES -->
         <div id="vales-section" class="content-section">
             <h2 style="font-size: 18px; color: #b7950b; margin-bottom: 15px; text-align: center;">Talonario de Vales Especiales 🎟️</h2>
-            <p style="font-size: 14px; color: #666; margin-bottom: 15px; text-align: center;">Toca cada vale para ver lo que incluye cuando regrese:</p>
+            <p style="font-size: 14px; color: #666; margin-bottom: 15px; text-align: center;">Toca cada vale para ver el detalle cuando regrese:</p>
 
-            <div class="coupon" onclick="alert('¡Canjeado! Válido para una cena deliciosa juntos en cuanto regrese de los departamentos.')">
-                <h3>🍽️ Válido por una Cena Especial</h3>
-                <p>Toca para revelar el detalle (Cena donde tú elijas)</p>
+            <div class="coupon" onclick="alert('¡Canjeado! Válido para un abrazo fuerte, eterno y sincero en cuanto abra la puerta al regresar de los departamentos.')">
+                <h3>🫂 Vale por un abrazo fuerte y eterno</h3>
+                <p>Toca para revelar el detalle (Abrazo largo sin soltarla)</p>
             </div>
 
-            <div class="coupon" onclick="alert('¡Canjeado! Válido por una tarde entera de apapachos, abrazos y películas sin distracciones.')">
-                <h3>🫂 Válido por Tarde de Apapachos</h3>
-                <p>Toca para revelar el detalle (Abrazos y descanso juntos)</p>
+            <div class="coupon" onclick="alert('¡Canjeado! Válido para una cena tranquila, relajada y totalmente a su elección en el lugar que usted prefiera.')">
+                <h3>🍽️ Cena tranquila y a su elección</h3>
+                <p>Toca para revelar el detalle (Cena especial sin prisas)</p>
             </div>
 
-            <div class="coupon" onclick="alert('¡Canjeado! Válido por tiempo de calidad platicando de todo y consintiéndote.')">
-                <h3>✨ Válido por un Momento Consentido</h3>
-                <p>Toca para revelar el detalle (Sorpresa al volver)</p>
+            <div class="coupon" onclick="alert('¡Canjeado! Válido para una tarde de películas, cobija y apapachos sin distracciones ni preocupaciones.')">
+                <h3>🍿 Tarde de películas y apapachos</h3>
+                <p>Toca para revelar el detalle (Maratón y descanso juntos)</p>
             </div>
         </div>
 
         <div class="footer">
-            Hecho con mucho cariño para ti ❤️
+            Hecho con todo el amor del mundo para ti ❤️
         </div>
     </div>
 

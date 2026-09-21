@@ -29,40 +29,40 @@ background-size: 24px 24px;
 <p class="text-sm sm:text-base text-amber-700 mt-2">Aunque hoy la distancia y el trabajo nos separen temporalmente, mi corazón está completamente con usted.</p>
 </header>
 ​<!-- Main Interactive Container -->
-<main class="max-w-md mx-auto w-full bg-white/90 backdrop-blur-md rounded-2xl shadow-xl border border-amber-200 overflow-hidden my-auto">
+<main class="max-w-md mx-auto w-full bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-amber-200 overflow-hidden my-auto">
 <!-- Navigation Tabs -->
-<div class="flex border-b border-amber-100 bg-amber-50">
-<button onclick="switchTab('carta')" id="btn-carta" class="flex-1 py-3 text-xs sm:text-sm font-bold text-amber-900 border-b-2 border-amber-500 transition-all">💌 Carta</button>
-<button onclick="switchTab('playlist')" id="btn-playlist" class="flex-1 py-3 text-xs sm:text-sm font-semibold text-amber-700/70 hover:text-amber-900 transition-all">🎶 Playlist</button>
-<button onclick="switchTab('cupones')" id="btn-cupones" class="flex-1 py-3 text-xs sm:text-sm font-semibold text-amber-700/70 hover:text-amber-900 transition-all">🎟️ Vales</button>
+<div class="flex border-b border-amber-200 bg-amber-50">
+<button type="button" onclick="mostrarSeccion('carta')" id="btn-carta" class="flex-1 py-3 text-xs sm:text-sm font-bold text-amber-900 border-b-2 border-amber-500 bg-white transition-all">💌 Carta</button>
+<button type="button" onclick="mostrarSeccion('playlist')" id="btn-playlist" class="flex-1 py-3 text-xs sm:text-sm font-semibold text-amber-700/70 hover:text-amber-900 transition-all">🎶 Playlist</button>
+<button type="button" onclick="mostrarSeccion('cupones')" id="btn-cupones" class="flex-1 py-3 text-xs sm:text-sm font-semibold text-amber-700/70 hover:text-amber-900 transition-all">🎟️ Vales</button>
 </div>
 ​<!-- Content Area -->
 <div class="p-6">
 <!-- TAB 1: CARTA -->
-<div id="tab-carta" class="space-y-4">
+<div id="seccion-carta" class="seccion-contenido space-y-4">
 <h2 class="text-lg font-bold text-amber-900 flex items-center gap-2">Una carta muy especial para usted 💛</h2>
-<div class="space-y-3 text-sm text-amber-900/90 leading-relaxed bg-amber-50/50 p-4 rounded-xl border border-amber-100 max-h-96 overflow-y-auto">
+<div class="space-y-3 text-sm text-amber-900/90 leading-relaxed bg-amber-50/60 p-4 rounded-xl border border-amber-100 max-h-80 overflow-y-auto">
 <p>Mi estimada y amada novia,</p>
-<p>Sé perfectamente que los últimos días han estado envueltos en un dolor muy profundo y una tristeza inmensa para usted y su familia tras el fallecimiento de su hermano. He estado pensando en usted a cada instante, admirando profundamente la valentía y la entereza con la que ha sabido sostener a los suyos en un momento tan duro y desgarrador.</p>
-<p>Hoy es el día de las flores amarillas, una fecha que simboliza la alegría, la esperanza y el deseo de que permanezcamos juntos por mucho tiempo. Aunque me haya tocado salir desde tempranas horas a trabajar y recorrer los departamentos, impidiéndome verla en persona hoy y durante el resto de la semana, quiero que sepa que mi mente y mis pensamientos no se apartan ni un solo segundo de su lado.</p>
-<p>La quiero mucho y la adoro con todo mi corazón. Desearía con el alma estar ahí sentado a su lado, abrazándola en silencio y dándole el consuelo que merece, pero sé que su fortaleza es gigante. Quiero recordarle que no está sola; estaré cruzando los departamentos por cuestiones laborales, pero mi amor por usted cruza cualquier distancia y se queda cuidándola.</p>
+<p>Sé perfectamente que los últimos días han estado envueltos en un dolor muy profundo y una tristeza inmensa para usted y su familia tras el sensible fallecimiento de su hermano. He estado pensando en usted a cada instante, admirando profundamente la valentía, la dignidad y la entereza con la que ha sabido sostener a los suyos en un momento tan duro y desgarrador.</p>
+<p>Hoy se conmemora el día de las flores amarillas, una fecha que simboliza la esperanza, la luz y el deseo genuino de caminar juntos por mucho tiempo. Aunque me haya tocado salir desde tempranas horas a trabajar y recorrer los departamentos como visitador médico, impidiéndome verla en persona hoy y durante el resto de la semana, quiero que tenga la certeza de que mi mente y mis pensamientos no se apartan ni un solo segundo de su lado.</p>
+<p>La quiero mucho y la adoro con todo mi corazón. Desearía con el alma estar ahí sentado a su lado, abrazándola en completo silencio y dándole el consuelo que merece, pero sé que su fortaleza es gigante. Quiero recordarle que no está sola; estaré cruzando las carreteras por cuestiones laborales, pero mi amor por usted cruza cualquier distancia y se queda cuidándola.</p>
 <p>Espero que este pequeño detalle digital le saque una sonrisa y le transmita un rayito de luz en medio de la tormenta. Tómese su tiempo para sanar, descanse, y sepa que estoy aquí, incondicionalmente, para cuando me necesite.</p>
 <p class="pt-2 font-semibold">Con todo mi cariño, admiración y amor infinito.</p>
 </div>
 </div>
 ​<!-- TAB 2: PLAYLIST -->
-<div id="tab-playlist" class="hidden space-y-4">
+<div id="seccion-playlist" class="seccion-contenido hidden space-y-4">
 <h2 class="text-lg font-bold text-amber-900 flex items-center gap-2">Nuestra Playlist Especial 🎶</h2>
-<p class="text-sm text-amber-800/80">La música tiene el poder de abrazar el alma cuando las palabras no alcanzan. Le dejo este espacio con melodías que nos conectan.</p>
+<p class="text-sm text-amber-800/80">La música tiene el poder de abrazar el alma cuando las palabras no alcanzan. Le dejo este espacio con melodías que nos conectan a pesar de la distancia.</p>
 <div class="bg-gradient-to-r from-amber-400 to-yellow-300 p-4 rounded-xl text-amber-950 shadow-inner flex flex-col items-center text-center space-y-3">
 <div class="text-3xl">🎧</div>
 <div class="font-bold text-base">Flores Amarillas & Calidez a la Distancia</div>
-<p class="text-xs opacity-90">Presione el botón para escuchar las canciones que nos recuerdan lo nuestro mientras yo cumplo con mis labores.</p>
+<p class="text-xs opacity-90">Presione el botón para escuchar las canciones que nos recuerdan lo nuestro mientras yo cumplo con mis labores en los departamentos.</p>
 <a href="https://open.spotify.com" target="_blank" class="bg-white text-amber-900 font-bold px-4 py-2 rounded-full text-xs shadow hover:bg-amber-50 transition-all">Abrir Playlist en Spotify</a>
 </div>
 </div>
 ​<!-- TAB 3: CUPONES -->
-<div id="tab-cupones" class="hidden space-y-3">
+<div id="seccion-cupones" class="seccion-contenido hidden space-y-3">
 <h2 class="text-lg font-bold text-amber-900 flex items-center gap-2">Talonario de Abrazos Pendientes 🎟️</h2>
 <p class="text-xs text-amber-800/80">Toque cada cupón para descubrirlo y guardarlo; podrá canjearlos en cuanto regrese de mi viaje por los departamentos.</p>
 ​<div class="space-y-2">
@@ -95,20 +95,25 @@ background-size: 24px 24px;
 <footer class="text-center text-xs text-amber-700/80 my-4">
 Hecho con todo el respeto y amor a la distancia 💛
 </footer>
-​<!-- Interactive Scripts -->
+​<!-- Robust Interactive Script -->
 <script>
-function switchTab(tabName) {
-// Hide all tabs
-document.getElementById('tab-carta').classList.add('hidden');
-document.getElementById('tab-playlist').classList.add('hidden');
-document.getElementById('tab-cupones').classList.add('hidden');
-​// Reset tab button styles
-document.getElementById('btn-carta').className = "flex-1 py-3 text-xs sm:text-sm font-semibold text-amber-700/70 hover:text-amber-900 transition-all border-b-2 border-transparent";
-document.getElementById('btn-playlist').className = "flex-1 py-3 text-xs sm:text-sm font-semibold text-amber-700/70 hover:text-amber-900 transition-all border-b-2 border-transparent";
-document.getElementById('btn-cupones').className = "flex-1 py-3 text-xs sm:text-sm font-semibold text-amber-700/70 hover:text-amber-900 transition-all border-b-2 border-transparent";
-​// Show selected tab and apply active button style
-document.getElementById('tab-' + tabName).classList.remove('hidden');
-document.getElementById('btn-' + tabName).className = "flex-1 py-3 text-xs sm:text-sm font-bold text-amber-900 border-b-2 border-amber-500 transition-all";
+function mostrarSeccion(nombre) {
+// Ocultar todas las secciones
+const secciones = document.querySelectorAll('.seccion-contenido');
+secciones.forEach(sec => sec.classList.add('hidden'));
+​// Remover estilos activos de todos los botones
+const botones = ['btn-carta', 'btn-playlist', 'btn-cupones'];
+botones.forEach(idBtn => {
+const btn = document.getElementById(idBtn);
+btn.className = "flex-1 py-3 text-xs sm:text-sm font-semibold text-amber-700/70 hover:text-amber-900 transition-all";
+});
+​// Mostrar la sección seleccionada y activar su botón
+const seccionActiva = document.getElementById('seccion-' + nombre);
+const botonActivo = document.getElementById('btn-' + nombre);
+​if (seccionActiva && botonActivo) {
+seccionActiva.classList.remove('hidden');
+botonActivo.className = "flex-1 py-3 text-xs sm:text-sm font-bold text-amber-900 border-b-2 border-amber-500 bg-white transition-all";
+}
 }
 ​function toggleCoupon(element) {
 const desc = element.querySelector('.coupon-desc');

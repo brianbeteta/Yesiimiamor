@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Una Promesa Eterna ❤️</title>
+  <style>
+    :root {
+      --bg-color: #0d0914;
+      --accent-gold: #ffd700;
+      --heart-red: #ff3366;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Fondo de estrellas flotantes */
+    .bg-stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .star {
+      position: absolute;
+      background: #fff;
+      border-radius: 50%;
+      opacity: 0.5;
+      animation: twinkle 3s infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+
+    /* Indicador de instrucción */
+    .instruction {
+      position: absolute;
+      top: 40px;
+      text-align: center;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      color: #e0d0f0;
+      z-index: 10;
+      padding: 0 20px;
+      transition: opacity 0.5s;
+    }
+
+    /* Contenedor Principal */
+    .container {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      max-width: 600px;
+    }
+
+    /* Corazón Candado */
+    .heart-lock {
+      width: 140px;
+      height: 140px;
+      background-color: var(--heart-red);
+      position: relative;
+      transform: rotate(-45deg);
+      box-shadow: 0 0 30px rgba(255, 51, 102, 0.6);
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.5s;
+      margin-bottom: 40px;
+    }
+
+    .heart-lock::before,
+    .heart-lock::after {
+      content: "";
+      width: 140px;
+      height: 140px;
+      background-color: var(--heart-red);
+      border-radius: 50%;
+      position: absolute;
+      transition: background-color 0.5s;
+    }
+
+    .heart-lock::before {
+      top: -70px;
+      left: 0;
+    }
+
+    .heart-lock::after {
+      left: 70px;
+      top: 0;
+    }
+
+    /* Ojo de la cerradura */
+    .keyhole {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      width: 24px;
+      height: 24px;
+      background-color: var(--accent-gold);
+      border-radius: 50%;
+      z-index: 5;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+    }
+
+    .keyhole::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 6px;
+      width: 12px;
+      height: 16px;
+      background-color: var(--accent-gold);
+      clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    }
+
+    /* La Llave Oculta */
+    .hidden-key {
+      position: absolute;
+      font-size: 2.2rem;
+      cursor: pointer;
+      z-index: 15;
+      filter: drop-shadow(0 0 10px gold);
+      transition: transform 0.2s ease-in-out;
+      animation: pulse 1.5s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from { transform: scale(1); }
+      to { transform: scale(1.2); }
+    }
+
+    /* Carta con el Mensaje */
+    .card {
+      display: none;
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      border-radius: 20px;
+      padding: 35px 25px;
+      text-align: center;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+      animation: fadeIn 1.2s forwards;
+      z-index: 20;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card h1 {
+      font-size: 1.8rem;
+      color: var(--accent-gold);
+      margin-bottom: 18px;
+    }
+
+    .card p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #f0e6f5;
+      margin-bottom: 15px;
+    }
+
+    .highlight {
+      color: var(--accent-gold);
+      font-weight: bold;
+    }
+
+    .ring-box {
+      font-size: 3.5rem;
+      margin-top: 15px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-stars" id="starsContainer"></div>
+
+  <div class="instruction" id="instructionText">
+    ✨ Hay una llave dorada oculta en la pantalla... Encuéntrala para abrir mi corazón ✨
+  </div>
+
+  <div class="container">
+    <div class="heart-lock" id="heartLock">
+      <div class="keyhole"></div>
+    </div>
+
+    <!-- Carta con el mensaje romántico -->
+    <div class="card" id="loveCard">
+      <h1>Para el amor de mi vida ❤️</h1>
+      <p>
+        El <span class="highlight">17 de enero de 2026</span> marcó uno de los días más hermosos de mi vida al pedirte que fueras mi novia y entregarte aquel primer anillo de promesa. Aunque con el tiempo ese anillo falló, <span class="highlight">mi compromiso y mi amor por ti jamás se decoloraron ni se desgastaron</span>; al contrario, crecieron más fuertes cada día.
+      </p>
+      <p>
+        Eres la mujer de mis sueños, mi compañera perfecta, mi inspiración diaria y el regalo más grande que la vida me ha dado.
+      </p>
+      <p>
+        Hoy quiero darte una nueva promesa, una tan pura y real como todo lo que siento por ti. Este nuevo anillo representa que mi amor por ti es eterno, firme y para siempre.
+      </p>
+      <p class="highlight" style="font-size: 1.2rem; margin-top: 20px;">
+        ¿Me permites seguir prometiéndote mi vida entera?
+      </p>
+      <div class="ring-box">💍✨</div>
+    </div>
+  </div>
+
+  <!-- Llave oculta -->
+  <div class="hidden-key" id="goldKey">🗝️</div>
+
+  <script>
+    // Generar fondo de estrellas
+    const starsContainer = document.getElementById('starsContainer');
+    for (let i = 0; i < 60; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.width = `${Math.random() * 3 + 1}px`;
+      star.style.height = star.style.width;
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.top = `${Math.random() * 100}%`;
+      star.style.animationDelay = `${Math.random() * 3}s`;
+      starsContainer.appendChild(star);
+    }
+
+    // Posicionar la llave en un lugar semioculto o aleatorio de la pantalla
+    const goldKey = document.getElementById('goldKey');
+    const heartLock = document.getElementById('heartLock');
+    const loveCard = document.getElementById('loveCard');
+    const instructionText = document.getElementById('instructionText');
+
+    function positionKey() {
+      // Ubicar la llave cerca de una esquina o bordes (evitando el centro)
+      const x = Math.random() * (window.innerWidth - 80) + 20;
+      const y = Math.random() * (window.innerHeight - 150) + 80;
+      goldKey.style.left = `${x}px`;
+      goldKey.style.top = `${y}px`;
+    }
+
+    positionKey();
+
+    // Evento al hacer clic en la llave
+    goldKey.addEventListener('click', () => {
+      // Ocultar instrucción y la llave
+      instructionText.style.opacity = '0';
+      goldKey.style.display = 'none';
+
+      // Cambiar el color del corazón y abrirlo
+      heartLock.style.backgroundColor = '#ff6699';
+      heartLock.style.boxShadow = '0 0 50px rgba(255, 215, 0, 0.9)';
+      
+      setTimeout(() => {
+        heartLock.style.display = 'none';
+        loveCard.style.display = 'block';
+      }, 800);
+    });
+  </script>
+</body>
+</html>
